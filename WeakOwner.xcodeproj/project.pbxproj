@@ -10,6 +10,7 @@
 		451F569D1F826B7D001AE5B2 /* WeakOwner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451F56931F826B7D001AE5B2 /* WeakOwner.framework */; };
 		451F56A21F826B7D001AE5B2 /* WeakOwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F56A11F826B7D001AE5B2 /* WeakOwnerTests.swift */; };
 		451F56A41F826B7D001AE5B2 /* WeakOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 451F56961F826B7D001AE5B2 /* WeakOwner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		451F56AF1F826B98001AE5B2 /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451F56AE1F826B94001AE5B2 /* Weak.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		451F569C1F826B7D001AE5B2 /* WeakOwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeakOwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		451F56A11F826B7D001AE5B2 /* WeakOwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakOwnerTests.swift; sourceTree = "<group>"; };
 		451F56A31F826B7D001AE5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451F56AE1F826B94001AE5B2 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		451F56951F826B7D001AE5B2 /* WeakOwner */ = {
 			isa = PBXGroup;
 			children = (
+				451F56AD1F826B94001AE5B2 /* Sources */,
 				451F56961F826B7D001AE5B2 /* WeakOwner.h */,
 				451F56971F826B7D001AE5B2 /* Info.plist */,
 			);
@@ -84,6 +87,14 @@
 				451F56A31F826B7D001AE5B2 /* Info.plist */,
 			);
 			path = WeakOwnerTests;
+			sourceTree = "<group>";
+		};
+		451F56AD1F826B94001AE5B2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				451F56AE1F826B94001AE5B2 /* Weak.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451F56AF1F826B98001AE5B2 /* Weak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,7 @@
 		451F56AB1F826B7D001AE5B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BDKUNMM63;
 				INFOPLIST_FILE = WeakOwnerTests/Info.plist;
@@ -390,6 +403,7 @@
 		451F56AC1F826B7D001AE5B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6BDKUNMM63;
 				INFOPLIST_FILE = WeakOwnerTests/Info.plist;

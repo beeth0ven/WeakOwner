@@ -9,28 +9,40 @@
 import XCTest
 @testable import WeakOwner
 
+class User {
+    var name: String?
+}
+
 class WeakOwnerTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        
+        let user = User()
+        
+        let setUserName = weak(user) { (user, text: String) in
+            user.name = text
         }
+        
+        setUserName("Luo Jie")
+        
+        XCTAssertEqual(user.name, "Luo Jie")
     }
     
+    func testExample1() {
+        
+        var user: User? = User()
+        
+        weak var weakUser = user
+        
+        let setUserName = weak(user!) { (user, text: String) in
+            user.name = text
+        }
+        
+        user = nil
+        
+        setUserName("Luo Jie")
+        
+        XCTAssertEqual(weakUser?.name, nil)
+    }
 }
+
