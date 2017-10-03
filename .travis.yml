@@ -5,3 +5,9 @@ xcode_scheme: WeakOwner
 xcode_sdk: iphonesimulator11.0
 script:
     - xcodebuild clean test -project WeakOwner.xcodeproj -scheme WeakOwner -destination "platform=iOS Simulator,name=iPhone 8,OS=11.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+
+deploy:
+  provider: script
+  script: ./scripts/push.sh
+  on:
+    tags: true
