@@ -42,7 +42,7 @@ class WeakOwnerTests: XCTestCase {
         
         setUserName("Luo Jie")
         
-        XCTAssertEqual(weakUser?.name, "nil")
+        XCTAssertEqual(weakUser?.name, nil)
     }
 }
 
