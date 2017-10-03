@@ -8,6 +8,6 @@ script:
 
 deploy:
   provider: script
-  script: ./scripts/push.sh
+  script: /scripts/push.sh
   on:
     tags: true
