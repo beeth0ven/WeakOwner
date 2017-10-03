@@ -9,42 +9,42 @@ A better way to deal function with weak reference.
 
 ## At a Glance
 
-**So this:**
+- **Function without return value:**
 
-```swift
-button.rx.tap
-    .subscribe(onNext: weak(self) { me in me.showAlert() })
-    .disposed(by: disposeBag)
-```
+  ```swift
+  button.rx.tap
+      .subscribe(onNext: weak(self) { me in me.showAlert() })
+      ...
+  ```
 
-is equivalent to:
+  is equivalent to:
 
-```swift
-button.rx.tap
-    .subscribe(onNext: { [weak self] in
-        guard let me = self else { return }
-        me.showAlert()
-    })
-    .disposed(by: disposeBag)
-```
+  ```swift
+  button.rx.tap
+      .subscribe(onNext: { [weak self] in
+          guard let me = self else { return }
+          me.showAlert()
+      })
+      ...
+  ```
 
-**And this:**
+- **Function with return value:**
 
-```swift
-let searchResults = rxText
-    .flatMapLatest(weak(self, ifNilJustReturn: .empty()) { me, text in
-        me.searchGitHub(text)
-    })
-```
+  ```swift
+  let searchResults = rxText
+      .flatMapLatest(weak(self, default: .empty()) { me, text in
+          me.searchGitHub(text)
+      })
+  ```
 
-is equivalent to:
+  is equivalent to:
 
-```swift
-let searchResults = rxText
-    .flatMapLatest { [weak self] text -> Observable<[Repository]> in
-        guard let me = self else { return .empty() }
-        return me.searchGitHub(text)
-}
+  ```swift
+  let searchResults = rxText
+      .flatMapLatest { [weak self] text -> Observable<[Repository]> in
+          guard let me = self else { return .empty() }
+          return me.searchGitHub(text)
+  }
 ```
 
 ## Installation
