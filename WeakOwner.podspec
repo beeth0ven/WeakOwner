@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = "WeakOwner"
-    s.version = "0.0.4"
+    s.version = "0.0.5"
     s.license = { :type => "MIT", :file => "LICENSE" }
     s.summary = "A better way to deal with weak reference function."
     s.homepage = "https://github.com/beeth0ven/WeakOwner"
