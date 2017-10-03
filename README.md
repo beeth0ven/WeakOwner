@@ -45,7 +45,7 @@ A better way to deal function with weak reference.
           guard let me = self else { return .empty() }
           return me.searchGitHub(text)
   }
-```
+  ```
 
 ## Installation
 
