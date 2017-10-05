@@ -31,6 +31,9 @@
 		451F56A11F826B7D001AE5B2 /* WeakOwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakOwnerTests.swift; sourceTree = "<group>"; };
 		451F56A31F826B7D001AE5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451F56AE1F826B94001AE5B2 /* Weak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		45296C481F85DD3100740875 /* WeakOwner.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeakOwner.podspec; sourceTree = SOURCE_ROOT; };
+		45296C491F85DD3100740875 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		45296C4A1F85DD3100740875 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			children = (
 				451F56951F826B7D001AE5B2 /* WeakOwner */,
 				451F56A01F826B7D001AE5B2 /* WeakOwnerTests */,
+				45296C471F85DD1600740875 /* Metadata */,
 				451F56941F826B7D001AE5B2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,8 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				451F56AD1F826B94001AE5B2 /* Sources */,
-				451F56961F826B7D001AE5B2 /* WeakOwner.h */,
-				451F56971F826B7D001AE5B2 /* Info.plist */,
+				45296C431F85DCD200740875 /* SupportingFiles */,
 			);
 			path = WeakOwner;
 			sourceTree = "<group>";
@@ -95,6 +98,25 @@
 				451F56AE1F826B94001AE5B2 /* Weak.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		45296C431F85DCD200740875 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				451F56961F826B7D001AE5B2 /* WeakOwner.h */,
+				451F56971F826B7D001AE5B2 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		45296C471F85DD1600740875 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				45296C481F85DD3100740875 /* WeakOwner.podspec */,
+				45296C4A1F85DD3100740875 /* README.md */,
+				45296C491F85DD3100740875 /* LICENSE */,
+			);
+			path = Metadata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
