@@ -1,9 +1,13 @@
 # WeakOwner
 
+
 [![Build Status](https://travis-ci.org/beeth0ven/WeakOwner.svg?branch=master)](https://travis-ci.org/beeth0ven/WeakOwner)
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg)
-[![CocoaPods](http://img.shields.io/cocoapods/v/WeakOwner.svg)](https://cocoapods.org/pods/WeakOwner)
+[![Version](https://img.shields.io/cocoapods/v/WeakOwner.svg?style=flat)](http://cocoapods.org/pods/WeakOwner)
+[![License](https://img.shields.io/cocoapods/l/WeakOwner.svg?style=flat)](http://cocoapods.org/pods/WeakOwner)
+[![Platform](https://img.shields.io/cocoapods/p/WeakOwner.svg?style=flat)](http://cocoapods.org/pods/WeakOwner)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 
 A better way to deal function with weak reference.
 
